@@ -5,7 +5,7 @@
 Summary: A utility for getting files from remote servers (FTP, HTTP, and others)
 Name: %{name}
 Version: 7.29.0
-Release: 2.ius%{?dist}
+Release: 4.ius%{?dist}
 License: MIT
 Group: Applications/Internet
 Source: http://curl.haxx.se/download/%{real_name}-%{version}.tar.bz2
@@ -236,6 +236,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/aclocal/libcurl.m4
 
 %changelog
+* Wed Mar 05 2014 Ben Harper <ben.harper@rackspace.com> - 7.29.0-4.ius
+- rebuilding off updated gnutls as it is installed as a part of the build process
+  Red Hat issued the following Security Advisories:
+  https://rhn.redhat.com/errata/RHSA-2014-0247.html
+  https://rhn.redhat.com/errata/RHSA-2014-0246.html
+
 * Tue Feb 26 2013 Ben Harper <ben.harper@rackspace.com> - 7.29.0-3.ius
 - porting from Rawhide
 
